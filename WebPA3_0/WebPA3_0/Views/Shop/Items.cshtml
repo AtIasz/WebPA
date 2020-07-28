@@ -1,0 +1,44 @@
+﻿@model List<WebPA.Items>
+@{
+    ViewData["Title"] = "List of Available Items";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div id="list-header">
+    <div id="item-name">Item name</div>
+    <div id="item-price">Price</div>
+    <div id="item-sale">Sale</div>
+</div>
+
+<form  method="post">
+    @*<input type="text" name="item_id" placeholder="Type in an ID you wish to sub for" />*@
+
+    <ul class="ul-items">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <li>
+                <p>
+                    <div id="li-items">
+                        <div id="li-item-itemname">@Model[i].item_name</div>
+                        <div id="li-item-price">@Model[i].item_price</div>
+                        <div id="li-item-sale">@Model[i].sale_percent</div>
+
+                        @using (Html.BeginForm("AddSub", "Account", FormMethod.Post))
+                        {
+                            <button id="button_sub" name="item_id" asp-area="" asp-controller="Account" asp-action="AddSub" value="@Model[i].item_id">Sub</button>
+
+                        }
+
+                        <button id="button_buy" asp-area="" asp-controller="Shop" asp-action="Purchase" value="@Model[i].item_id">Buy</button>
+
+
+                    </div>
+
+                </p>
+            </li>
+        }
+
+
+
+    </ul>
+</form>

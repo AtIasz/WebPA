@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "List of Items";
+}
+
+@model List<WebPA.Items>
+<h1>@ViewData["Title"]</h1>
+<br />
+<br />
+<br />
+<br />
+<div id="list-header">
+    <div id="item-name">Item name </div>
+    <div id="item-price">Price</div>
+    <div id="item-sale">Sale</div>
+</div>
+
+<ul class="ul-items">
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <li>
+
+            @*<div style="float:none;">*@
+            @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">@itemname.PadLeft(30)|@Model[i].item_price.ToString().PadRight(6)|@Model[i].sale_percent.ToString().PadRight(3) %</a>*@
+
+            <div class="dots" id ="li-items-admin">
+                <div  id="li-items-admin-name">@Model[i].item_name</div>
+                <div  id="li-items-admin-price">@Model[i].item_price</div>
+                <div  id="li-items-admin-sale">@Model[i].sale_percent %</div>
+
+
+            </div>
+        </li>
+    }
+
+
+
+</ul>

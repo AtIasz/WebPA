@@ -1,0 +1,30 @@
+﻿@model List<WebPA.Items>
+
+<br /><br /><br /><br />
+<div class="text-center">
+    <h1 class="display-4">Update item(s)</h1><br />
+    <form action="Update" method="post">
+        <label>Item name</label>
+        <input type="text" name="item_name" />
+        <label>Price</label>
+        <input type="text" name="price" />
+        <label>Sale%</label>
+        <input type="text" name="sale" />
+        <button type="submit" onclick="Update()">Apply</button>
+    </form>
+</div>
+
+
+<form action="Update" method="post">
+    <ul id="ul-items">
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <li>
+                <div id="li-items">
+                    <div id="delete1">@Model[i].item_name | @Model[i].item_price | @Model[i].sale_percent % </div>
+                </div>
+            </li>
+        }
+    </ul>
+</form>

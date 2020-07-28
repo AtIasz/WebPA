@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "r1njKKOK2hSHEqq4lGjVzl7G05ctvi+2E8A7g1nDlLZRySi4PptzeR/EP845QlIwogxbouu365X0t6h5VQIhzA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Én\\Desktop\\WebPA3_0\\WebPA3_0\\WebPA3_0\\WebPA3_0.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Én\\.nuget\\packages\\npgsql\\4.1.3.1\\npgsql.4.1.3.1.nupkg.sha512",
+    "C:\\Users\\Én\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

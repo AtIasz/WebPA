@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Purchase";
+}
+@model WebPA.Items
+
+<form >
+    <div class="text-center">
+        <h1 class="display-4">This is the end of the shopping for now.</h1><br /><br /><br />
+        @if (Model.sale_percent == 0)
+        {
+            <div>You could purchase @Model.item_name for @Model.item_price HUF now, but there is no endpoint, where you can give me your money.</div>
+        }
+            
+        @if (Model.sale_percent > 0)
+        {
+            
+            <p>You could purchase @Model.item_name for <div id="output" style="display: inline;" action="calc()"></div>  HUF now, but there is no endpoint, where you can give me your money.</p>
+
+        }
+        <p>Go back to the home page</p>
+        <div id="majom"></div>
+    </div>
+</form>
+<script>
+  var p = @Model.item_price;
+  var s = @Model.sale_percent;
+    var o = (s / 100) * p;
+    var price = p - o;
+    document.getElementById("output").innerHTML = price;
+</script>

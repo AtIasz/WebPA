@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Registration";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Registration</h1>
+    <form action="SetUser" method="post">
+        <label>Email</label>
+        <input type="text" id="email" name="email" />
+        <label>Password</label>
+        <input type="password" id="password" name="password" /><br />
+        <button class="nav-link text-dark" onclick="location.href='/Home/Index'">Reg Me In!</button>
+    </form>
+</div>

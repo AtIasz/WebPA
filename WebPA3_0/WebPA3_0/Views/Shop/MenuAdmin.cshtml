@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Operations";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<div class="text-center">
+    <h1 class="display-4">Make a decision, You must</h1>
+    <form method="post" style="text-align:center">
+        <button id ="adminButton" class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="List">List of Items</button>
+        <button id ="adminButton" class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="Add">Add Item(s)</button>
+        <button id ="adminButton" class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="UpdateView">Change Item(s)</button>
+        <button id ="adminButton" class="nav-link text-dark" asp-area="" asp-controller="Delete" asp-action="Delete">Delete Item(s)</button>
+    </form>
+</div>
